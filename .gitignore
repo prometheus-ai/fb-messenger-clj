@@ -1,2 +1,5 @@
 # Clojure
 target/
+
+# Leiningen
+.lein-failures
