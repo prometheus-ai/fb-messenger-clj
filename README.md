@@ -6,30 +6,30 @@ A Clojure Library for the [Facebook Messenger Platform](https://developers.faceb
 
 This library has following functions:
 
-	(authenticate accessToken)
+	(authenticate params token)
 	(send-text-message recipientId message)
 
 ### Installation
 
-`fb-messenger-clj` will be available soon as a Maven artifact from Clojars.
+`fb-messenger` will be available soon as a Maven artifact from Clojars.
 
 With Leiningen/Boot:
 
-	[fb-messenger-clj "0.0.1"]
+	[fb-messenger "0.0.1"]
 
 ### Quickstart
 
-The Facebook Messenger Library is provided by the `fb-messenger-clj.core` namespace.
+The Facebook Messenger Library is provided by the `fb-messenger` namespace.
 
-First, require it in the REPL:
+First, require the namespace needed (for example `auth`) in the REPL:
 
-	(require '[fb-messenger-clj.core :as fb])
+	(require '[fb-messenger.auth :as fb])
 
 Or in your application:
 
 	(ns my-app.core
-	  (:require [fb-messenger-clj :as fb]))
-	  
+	  (:require [fb-messenger.auth :as fb]))
+
 ### Code Examples
 
 See how to set up a Facebook Messenger Bot in the [wiki](https://github.com/prometheus-ai/fb-messenger-clj/wiki).
