@@ -4,18 +4,18 @@ A Clojure Library for the [Facebook Messenger Platform](https://developers.faceb
 
 ### About
 
-This library has following functions:
+This library has the following functions:
 
 	(authenticate params token)
 	(send-text-message recipientId message)
 
 ### Installation
 
-`fb-messenger` will be available soon as a Maven artifact from Clojars.
+`fb-messenger` is available as a Maven artifact from [Clojars](http://clojars.org/fb-messenger).
 
 With Leiningen/Boot:
 
-	[fb-messenger "0.0.1"]
+[![Clojars Project](http://clojars.org/fb-messenger/latest-version.svg)](http://clojars.org/fb-messenger)
 
 ### Quickstart
 

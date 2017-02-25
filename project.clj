@@ -1,4 +1,4 @@
-(defproject fb-messenger "0.1.0"
+(defproject fb-messenger "0.2.0-SNAPSHOT"
   :description "A Clojure Library for the Facebook Messenger Platform"
   :url "https://github.com/prometheus-ai/fb-messenger-clj"
   :license {:name "Eclipse Public License"
