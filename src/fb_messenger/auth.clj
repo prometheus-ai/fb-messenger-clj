@@ -8,8 +8,8 @@
 
 (defn authenticate
   ([params]
-   (authenticate params *token*))
-  ([params token]
+   (authenticate *token* params))
+  ([token params]
    (let [mode (get params "hub.mode")
           verify-token (get params "hub.verify_token")
           challenge (get params "hub.challenge")]

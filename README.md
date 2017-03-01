@@ -6,7 +6,7 @@ A Clojure Library for the [Facebook Messenger Platform](https://developers.faceb
 
 This library has the following functions:
 
-	(authenticate params token)
+	(authenticate params)
 	(send-text-message recipientId message)
 
 ### Installation
