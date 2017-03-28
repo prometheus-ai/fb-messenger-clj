@@ -46,15 +46,15 @@
    :payload postback})
 
 (defn quick-reply
-  [title payload]
-  {:content_type "text"
-   :title title
-   :payload payload}
-  [title payload image-url]
-  {:content_type "text"
-   :title title
-   :payload payload
-   :image_url image-url})
+  ([title payload]
+    {:content_type "text"
+     :title title
+     :payload payload})
+  ([title payload image-url]
+    {:content_type "text"
+     :title title
+     :payload payload
+     :image_url image-url}))
 
 (defn location-quick-reply []
   {:content_type "location"})
