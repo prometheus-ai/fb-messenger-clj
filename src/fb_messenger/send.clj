@@ -73,6 +73,6 @@
    (:body (client/get
             (str *base-url* psid)
             {:query-params {:access_token page-access-token
-                            :fields       "first_name,last_name,profile_pic,locale,timezone,gender"
-                            :content-type :json}
+                            :fields       "first_name,last_name,profile_pic,locale,timezone,gender"}
+             :content-type :json
              :as :json}))))
