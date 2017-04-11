@@ -9,9 +9,9 @@
   [base-url]
   (alter-var-root #'*base-url* (constantly base-url)))
 
-(defn set-token!
-  [token]
-  (alter-var-root #'*page-access-token* (constantly token)))
+(defn set-page-access-token!
+  [page-access-token]
+  (alter-var-root #'*page-access-token* (constantly page-access-token)))
 
 (defn- post-api
   [endpoint body page-access-token]
