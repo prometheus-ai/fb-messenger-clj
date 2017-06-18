@@ -39,6 +39,11 @@ Code examples include:
 * Echo Bot
 * Processing a text message
 
+### Contributing
+
+1. Use [parinfer](https://github.com/shaunlebron/parinfer).
+2. Follow the [Clojure Style Guide](https://github.com/bbatsov/clojure-style-guide).
+
 ### License
 
 The use and distribution terms for this software are covered by the [Eclipse Public License 1.0](http://opensource.org/licenses/eclipse-1.0.php). You must not remove this notice, or any other, from this software.
