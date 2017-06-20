@@ -6,13 +6,13 @@ A Clojure Library for the [Facebook Messenger Platform](https://developers.faceb
 
 This library has the following functions:
 
-**Authentication**
+**Authentication** ([auth.clj](https://github.com/prometheus-ai/fb-messenger-clj/blob/master/src/fb_messenger/auth.clj))
 
 	(authenticate params)
 
-**Sending Messages**
+**Sending Messages** ([send.clj](https://github.com/prometheus-ai/fb-messenger-clj/blob/master/src/fb_messenger/send.clj))
 
-Send messages to users. ([Send Message API Documentation](https://developers.facebook.com/docs/messenger-platform/send-api-reference))
+Send messages to users. ([Send Message API Facebook Documentation](https://developers.facebook.com/docs/messenger-platform/send-api-reference))
 
 Send Message Handler:
 
@@ -23,7 +23,7 @@ Examples using the text and video message templates from below:
 	(send-message recipient-id (text-message "Hello World"))
 	(send-message recipient-id (video-message [video-url]))
 
-**Available Message Templates**
+**Available Message Templates** ([templates.clj](https://github.com/prometheus-ai/fb-messenger-clj/blob/master/src/fb_messenger/templates.clj))
 
 Image:
 
@@ -75,7 +75,7 @@ Location Quick Reply:
 
 **Upload File Attachment**
 
-[Upload File Attachment Documentation](https://developers.facebook.com/docs/messenger-platform/send-api-reference/file-attachment)
+You can send files by uploading them. ([File Attachment Facebook Documentation](https://developers.facebook.com/docs/messenger-platform/send-api-reference/file-attachment))
 
 	(upload-attachment type url)
 
