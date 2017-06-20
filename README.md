@@ -10,11 +10,11 @@ This library has the following functions:
 
 	(authenticate params)
 
-**[Send API Reference](https://developers.facebook.com/docs/messenger-platform/send-api-reference)**
+**Sending Messages**
 
-Send messages to users.
+Send messages to users. ([Send Message API Documentation](https://developers.facebook.com/docs/messenger-platform/send-api-reference))
 
-**Send Message Handler**
+Send Message Handler:
 
 	(send-message recipient-id message)
 
@@ -73,18 +73,24 @@ Location Quick Reply:
 
 	(location-quick-reply)
 
-**[Upload File Attachment](https://developers.facebook.com/docs/messenger-platform/send-api-reference/file-attachment)**
+**Upload File Attachment**
+
+[Upload File Attachment Documentation](https://developers.facebook.com/docs/messenger-platform/send-api-reference/file-attachment)
 
 	(upload-attachment type url)
 
-**Set [Facebook Messenger Profile](https://developers.facebook.com/docs/messenger-platform/messenger-profile):**
+**Set Facebook Messenger Profile:**
 
-Set your Bot's properties via the Facebook Messenger Profile API.
+Set your Bot's properties via the [Facebook Messenger Profile API](https://developers.facebook.com/docs/messenger-platform/messenger-profile).
 
 e.g. Persistent Menu, Get Started Button, Greeting Text, Domain Whitelisting, Account Linking, Payment Settings, Target Audience
 
 	(set-messenger-profile profile)
 	(get-user-profile psid)
+
+### Register for a Facebook Page Access Token
+
+To start using the Facebook Messenger Send/Receive service you'll need to setup a Facebook Page, [Facebook App](https://developers.facebook.com/apps/), create a Page Access Token and link the app to the page. We'll run through this step by step [here](https://github.com/prometheus-ai/fb-messenger-clj/wiki/Facebook-Setup/).
 
 ### Installation
 
