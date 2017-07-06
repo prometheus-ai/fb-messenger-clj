@@ -37,7 +37,7 @@
   "send Sender Action to PSID via FB Send Api, see:
    https://developers.facebook.com/docs/messenger-platform/send-api-reference/sender-actions"
   ([psid sender-action]
-   (send-sender-action psid send-sender-action *page-access-token*))
+   (send-sender-action psid sender-action *page-access-token*))
   ([psid sender-action page-access-token]
    (post-api "me/messages"
              {:recipient     {:id psid}
