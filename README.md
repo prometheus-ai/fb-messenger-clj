@@ -2,96 +2,6 @@
 
 A Clojure Library for the [Facebook Messenger Platform](https://developers.facebook.com/docs/messenger-platform).
 
-### About
-
-This library has the following functions:
-
-**Authentication** ([auth.clj](https://github.com/prometheus-ai/fb-messenger-clj/blob/master/src/fb_messenger/auth.clj))
-
-	(authenticate params)
-
-**Sending Messages** ([send.clj](https://github.com/prometheus-ai/fb-messenger-clj/blob/master/src/fb_messenger/send.clj))
-
-Send messages to users. ([Send Message API Facebook Documentation](https://developers.facebook.com/docs/messenger-platform/send-api-reference))
-
-Send Message Handler:
-
-	(send-message recipient-id message)
-
-Examples using the text and video message templates from below:
-
-	(send-message recipient-id (text-message "Hello World"))
-	(send-message recipient-id (video-message [video-url]))
-
-**Available Message Templates** ([templates.clj](https://github.com/prometheus-ai/fb-messenger-clj/blob/master/src/fb_messenger/templates.clj))
-
-Image:
-
-	(image-message [image-url])
-
-Video:
-
-	(video-message [video-url])
-
-Audio:
-
-	(audio-message [audio-url])
-
-File:
-
-	(file-message [file-url])
-
-Text:
-
-	(text-message [text])
-
-Quick Replies:
-
-	(quick-replies-message [text quick-replies])
-
-Button Template:
-
-	(button-template [text buttons])
-
-Generic Template:
-
-	(generic-template [elements])
-
-URL Button:
-
-	(url-button [title url])
-
-Postback Button:
-
-	(postback-button [title postback])
-
-Quick Reply Template:
-
-	(quick-reply [title payload *image-url*])
-
-Location Quick Reply:
-
-	(location-quick-reply)
-
-**Upload File Attachment**
-
-You can send files by uploading them. ([File Attachment Facebook Documentation](https://developers.facebook.com/docs/messenger-platform/send-api-reference/file-attachment))
-
-	(upload-attachment type url)
-
-**Set Facebook Messenger Profile:**
-
-Set your Bot's properties via the [Facebook Messenger Profile API](https://developers.facebook.com/docs/messenger-platform/messenger-profile).
-
-e.g. Persistent Menu, Get Started Button, Greeting Text, Domain Whitelisting, Account Linking, Payment Settings, Target Audience
-
-	(set-messenger-profile profile)
-	(get-user-profile psid)
-
-### Register for a Facebook Page Access Token
-
-To start using the Facebook Messenger Send/Receive service you'll need to setup a Facebook Page, [Facebook App](https://developers.facebook.com/apps/), create a Page Access Token and link the app to the page. We'll run through this step by step [here](https://github.com/prometheus-ai/fb-messenger-clj/wiki/Facebook-Setup/).
-
 ### Installation
 
 `fb-messenger` is available as a Maven artifact from [Clojars](http://clojars.org/fb-messenger).
@@ -106,20 +16,158 @@ The Facebook Messenger Library is provided by the `fb-messenger` namespace.
 
 First, require the namespace needed (for example `auth`) in the REPL:
 
-	(require '[fb-messenger.auth :as fb])
+```clj
+(require '[fb-messenger.auth :as fb])
+```
 
 Or in your application:
 
-	(ns my-app.core
-	  (:require [fb-messenger.auth :as fb]))
+```clj
+(ns my-app.core
+  (:require [fb-messenger.auth :as fb]))
+```
 
-### Code Examples
+### Documentation & Code Examples
 
-See how to set up a Facebook Messenger Bot in the [wiki](https://github.com/prometheus-ai/fb-messenger-clj/wiki).
+See how to set up a Facebook Messenger Bot in the [Wiki](https://github.com/prometheus-ai/fb-messenger-clj/wiki).
 
 Code examples:
 
-[Echo Bot](https://github.com/prometheus-ai/prometheus-sample)
+* [Echo Bot Example](https://github.com/prometheus-ai/prometheus-sample) using `prometheus-ai/fb-messenger-clj`
+
+Further Code Examples in Clojure:
+
+* [Facebook Messenger Bot in Clojure on Heroku](https://github.com/allanberger/fb-bot-clj-heroku)
+* [Facebook Messenger Bot in Clojure on Google App Engine](https://github.com/lemmings-io/facebook-messenger-google-app-engine)
+* [Facebook Messenger NLP Example in Clojure](https://github.com/prometheus-ai/fb-messenger-clj/wiki/Facebook-Messenger-NLP-in-Clojure)
+* [Chatfuel JSON API & Broadcasting API Example](https://github.com/prometheus-ai/fb-messenger-clj/wiki/Chatfuel-JSON-API-&-Broadcasting-API-Example-in-Clojure)
+* [Extract Latitude & Longitude from Images](https://www.netidee.at/prometheus/extracting-latitudelongitude-images)
+* [Distance between two locations in Latitude & Longitude](https://www.netidee.at/prometheus/extracting-latitudelongitude-images)
+* [ClojureScript on the server side using Lumo](https://glitch.com/edit/#!/lumo-clojurescript)
+
+### About the library
+
+This library has the following functions:
+
+**Authentication** ([auth.clj](https://github.com/prometheus-ai/fb-messenger-clj/blob/master/src/fb_messenger/auth.clj))
+
+```clj
+(authenticate params)
+```
+
+**Sending Messages** ([send.clj](https://github.com/prometheus-ai/fb-messenger-clj/blob/master/src/fb_messenger/send.clj))
+
+Send messages to users. ([Send Message API Facebook Documentation](https://developers.facebook.com/docs/messenger-platform/send-api-reference))
+
+Send Message Handler:
+
+```clj
+(send-message recipient-id message)
+```
+
+Examples using the text and video message templates from below:
+
+```clj
+(send-message recipient-id (text-message "Hello World"))
+(send-message recipient-id (video-message [video-url]))
+```
+
+**Available Message Templates** ([templates.clj](https://github.com/prometheus-ai/fb-messenger-clj/blob/master/src/fb_messenger/templates.clj))
+
+Image:
+
+```clj
+(image-message [image-url])
+```
+
+Video:
+
+```clj
+(video-message [video-url])
+```
+
+Audio:
+
+```clj
+(audio-message [audio-url])
+```
+
+File:
+
+```clj
+(file-message [file-url])
+```
+
+Text:
+
+```clj
+(text-message [text])
+```
+
+Quick Replies:
+
+```clj
+(quick-replies-message [text quick-replies])
+```
+
+Button Template:
+
+```clj
+(button-template [text buttons])
+```
+
+Generic Template:
+
+```clj
+(generic-template [elements])
+```
+
+URL Button:
+
+```clj
+(url-button [title url])
+```
+
+Postback Button:
+
+```clj
+(postback-button [title postback])
+```
+
+Quick Reply Template:
+
+```clj
+(quick-reply [title payload *image-url*])
+```
+
+Location Quick Reply:
+
+```clj
+(location-quick-reply)
+```
+
+**Upload File Attachment**
+
+You can send files by uploading them. ([File Attachment Facebook Documentation](https://developers.facebook.com/docs/messenger-platform/send-api-reference/file-attachment))
+
+```clj
+(upload-attachment type url)
+```
+
+**Set Facebook Messenger Profile:**
+
+Set your Bot's properties via the [Facebook Messenger Profile API](https://developers.facebook.com/docs/messenger-platform/messenger-profile).
+
+e.g. Persistent Menu, Get Started Button, Greeting Text, Domain Whitelisting, Account Linking, Payment Settings, Target Audience
+
+```clj
+(set-messenger-profile profile)
+(get-user-profile psid)
+```
+
+### Register for a Facebook Page Access Token
+
+To start using the Facebook Messenger Send/Receive service you'll need to setup a Facebook Page, [Facebook App](https://developers.facebook.com/apps/), create a Page Access Token and link the app to the page. We'll run through this step by step [here](https://github.com/prometheus-ai/fb-messenger-clj/wiki/Facebook-Setup/).
 
 ### Contributing
 
