@@ -1,6 +1,8 @@
-# fb-messenger-clj
+# Introduction to fb-messenger-clj
 
-A Clojure Library for the [Facebook Messenger Platform](https://developers.facebook.com/docs/messenger-platform).
+fb-messenger-clj is a Clojure library for the [Facebook Messenger Bot API](https://developers.facebook.com/docs/messenger-platform).
+
+The goal of this library is to provide easy-to-use functions, well defined documentation & application examples so you can start with development and get results right away.
 
 ### Installation
 
@@ -34,6 +36,8 @@ See how to set up a Facebook Messenger Bot in the [Wiki](https://github.com/prom
 Code examples:
 
 * [Echo Bot Example](https://github.com/prometheus-ai/prometheus-sample) using `prometheus-ai/fb-messenger-clj`
+
+* [Echo Bot Example ready for Heroku](https://github.com/prometheus-ai/prometheus-sample-heroku) using `prometheus-ai/fb-messenger-clj` including live demo
 
 Further Code Examples in Clojure:
 
