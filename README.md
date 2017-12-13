@@ -180,6 +180,6 @@ To start using the Facebook Messenger Send/Receive service you'll need to setup 
 
 ### License
 
-The use and distribution terms for this software are covered by the [Eclipse Public License 1.0](http://opensource.org/licenses/eclipse-1.0.php). You must not remove this notice, or any other, from this software.
+The use and distribution terms for this software are covered by the [MIT License](https://github.com/prometheus-ai/fb-messenger-clj/blob/master/LICENSE). You must not remove this notice, or any other, from this software.
 
 Disclaimer: This software is **not** affiliated to Facebook or represents Facebook in any way.
